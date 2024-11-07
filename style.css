@@ -1,0 +1,214 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background for the entire body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #7c2f2f;
+    padding: 1rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Animation Gif.gif') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-out 0.5s;
+}
+
+.get-started {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff5e5e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    transition: background-color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #e04848;
+}
+
+/* Unique background color for About, Services, Contact Sections */
+#about, #services, #contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./Animation Gif.gif') center/cover no-repeat;
+    color: #fff;
+}
+
+/* About Section */
+#about {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#services ul {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+#services ul li {
+    margin: 1rem 0;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    padding: 1rem 2rem;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e04848;
+}
+
+/* Footer */
+footer {
+    background-color: #7c2f2f;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .get-started {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    #about, #services, #contact {
+        padding: 3rem 1rem;
+    }
+
+    #about h2, #services h2, #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact input, #contact textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
